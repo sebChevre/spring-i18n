@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping default-access="field">
+
+    <class name="com.developpez.hikage.spring.i18n.model.Traduction" table="traductions"
+           mutable="true">
+
+        <id name="id" column="id">
+            <generator class="org.hibernate.id.IdentityGenerator"/>
+        </id>
+
+
+        <property name="key" type="java.lang.String" length="20" column="key" not-null="true"/>
+
+        <property name="langue"  type="java.lang.String" length="2" column="langue" not-null="true"/>
+
+        <property name="pays" type="java.lang.String" length="2" column="pays" not-null="true"/>
+
+        <property name="texte" type="java.lang.String" length="120" column="texte" not-null="false"/>
+
+
+    </class>
+
+</hibernate-mapping>
